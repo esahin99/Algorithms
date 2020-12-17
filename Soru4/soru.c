@@ -19,12 +19,12 @@ int main()
     for(i=1; i<=n;){					      	//İşlem zamanımız O(n) olabilmesi için iç içe dögü kullanmamamız gerekir dolayısıyla
         if(k == 0){						      	//işlemi yapabilmemiz için çeşitli koşullar koymalıyız.
             arrB[i] = 1;			    		//Benim burada yaptığım işlem ise kabaca i ifadesini her arttırdığımda
-            k++;						        	//arrB nin değerini 1 e eşitliyorum çünkü aşağıda çarpma işlemi yaptığımda 1
-        }								             	//Değerinin etkisiz eleman olmasını istiyorum.
-        if(i == 1){							      //Yaptığım işlemler ise arrayin başı, arrayin ortaları ve arrayin sonu olmak üzere 3 e ayrıldı
-            arrB[i] *= arrA[n-j];	    //ve her işlem başarılı bir şekilde sonuçlandığında i yi arttırdığım bir koşul var 
-            j++;							        //O koşulda ise i dğerini arttırırken diğer yapılan işlemleri tekrar resetliyorum
-        }								            	//Böylece tek 1 for dögüsü ile istenen sonucu basmış oluyorum
+            k++;						        //arrB nin değerini 1 e eşitliyorum çünkü aşağıda çarpma işlemi yaptığımda 1
+        }								        //Değerinin etkisiz eleman olmasını istiyorum.
+        if(i == 1){							    //Yaptığım işlemler ise arrayin başı, arrayin ortaları ve arrayin sonu olmak üzere 3 e ayrıldı
+            arrB[i] *= arrA[n-j];	            //ve her işlem başarılı bir şekilde sonuçlandığında i yi arttırdığım bir koşul var 
+            j++;							    //O koşulda ise i dğerini arttırırken diğer yapılan işlemleri tekrar resetliyorum
+        }								        //Böylece tek 1 for dögüsü ile istenen sonucu basmış oluyorum
         else if(i>1 && i<n){
             if(m != i){
                 arrB[i] *= arrA[m];
